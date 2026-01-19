@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Sum of Two Numbers</h2>
+<form method="POST">
+  {% csrf_token %}
+  <label for="first_value">First Number:</label>
+  <input
+    type="number"
+    id="first_value"
+    name="first_value"
+    required
+  /><br /><br />
+  <label for="second_value">Second Number:</label>
+  <input
+    type="number"
+    id="second_value"
+    name="second_value"
+    required
+  /><br /><br />
+  <input type="submit" value="Calculate Sum" />
+</form>
+
+<h3>Result: {{ result }}</h3>
+{% endblock %}

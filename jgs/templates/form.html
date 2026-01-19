@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<h1>Submit Your Information</h1>
+<form method="get" action="">
+  <label for="first_value">num1</label>
+  <input type="text" id="first_value" name="first_value" required /><br />
+  <label for="second_value">num2</label>
+  <input type="text" id="second_value" name="second_value" required /><br />
+  <button type="submit">Submit</button>
+  <h2>The result is {{result}}</h2>
+</form>
+{% endblock %}

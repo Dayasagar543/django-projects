@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<h2>Calculator</h2>
+<!-- {{fn.as_p}} -->
+<form action=""  method="POST">
+  {% csrf_token%}
+  <label for="num1">Input value 1: </label>
+  <input type="text" id="num1" name="num1" value={{num1}} /><br>
+  <br>
+  <label for="num2">Input value 2: </label><br>
+  <input type="text" id="num2" name="num2" value={{num2}} /><br>
+  <label for="operation">operation</label>
+  <select name="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <br>
+  <button type="submit">Calculate</button><br>
+  <input type="text" name="result" value="{{result}}" />
+</form>
+{% endblock %}
