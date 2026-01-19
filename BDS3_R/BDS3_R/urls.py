@@ -19,5 +19,7 @@ from django.urls import path
 from BDS3_R import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', admin.site.urls),
+    path('', views.home),
+    path('service1', views.service1),
+    path('service1/<product_id>', views.product_page),
 ]
