@@ -1,4 +1,14 @@
-{%include "header.html"%} {% block content %}
-<h1>hi there how are you doing</h1> {% endblock %}
-
-{% include "footer.html" %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>hi there how are you doing</h1>
+    {%include "header.html"%} {% block content %} {% endblock %} {% include
+    "footer.html" %}
+  </body>
+</html>
