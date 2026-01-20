@@ -11,5 +11,5 @@ def service1(request):
     return render(request,"service1.html")
 
 def product_page(request,product_id):
-    return HttpResponse(product_id)
-    # return render(request,"product_page.html",{"productid":product_id})
+    # return HttpResponse(product_id)
+    return render(request,"product_page.html",{"product_id":product_id})
