@@ -15,6 +15,9 @@ def countactus(request):
 def ourprograms(request):
     return render(request,"Our_pragrams.html")
 
+def Carrers(request):
+    return render(request,"Carrers.html")
+
 def program_detailing_page(request):
     return render(request,"Program_detailing_page.html")
 
