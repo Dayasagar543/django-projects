@@ -1,10 +1,8 @@
-<header class="w-full h-24 items-center">
-  <div class="flex bg-blue-700 m-4 w-full h-full justify-around">
+<header class="h-20">
+  <div class="flex bg-blue-700 w-full h-full items-center justify-around">
     {% comment %} logo {% endcomment %}
-    <div class="w-[40%] h-full justify-center items-center">
-      <a
-        href="../templates/home.html"
-        class="h-full flex justify-center items-center"
+    <div class="w-[25vw] h-full flex items-center relative ">
+      <a href="/" class="flex items-center justify-around  absolute left-5"
         ><img
           src="../static/images/chinuch_Tech_image.png"
           alt="chinuch_Tech_image"
@@ -12,17 +10,20 @@
       /></a>
     </div>
     {% comment %} pages {% endcomment %}
-    <div class="w-[60%] h-full flex justify-around items-center">
+    <div class="w-[50vw] h-full flex justify-around items-center text-white">
       <div>
-        <a href="../templates/Our_pragrams.html" class="h-1">Our programs</a>
+        <a href="{% url 'home' %}" class="h-1">Our programs</a>
       </div>
-      <div><a href="../templates/ContactUs.html">ContactUs</a></div>
-      <div><a href="../templates/AboutUs.html">AboutUs</a></div>
-      <div><a href="../templates/">Carrers</a></div>
+      <div><a href="{% url 'contactus' %}">ContactUs</a></div>
+      <div><a href="{% url 'aboutus' %}">AboutUs</a></div>
+      <div><a href="{% url 'carrers' %}">Carrers</a></div>
     </div>
     {% comment %} buttons {% endcomment %}
-    <div class="w-[40%] h-full flex justify-around items-center">
-      <button>SignUp</button><button>Login</button>
+    <div class="w-[25vw] h-full flex items-center justify-around">
+      <div class="flex w-[80%] h-[70%] justify-evenly items-center">
+        <button class="border border-white w-[30%] h-full rounded-sm text-white ">SignUp</button>
+        <button class="border border-white w-[30%] h-full rounded-sm text-white ">Login</button>
+      </div>
     </div>
   </div>
 </header>

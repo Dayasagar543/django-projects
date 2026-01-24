@@ -20,10 +20,11 @@ from chinuch_tech import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('aboutus', views.aboutus),
-    path('contactus', views.countactus),
-    path('ourprograms', views.ourprograms),
+    path('', views.home,name='home'),
+    path('aboutus', views.aboutus,name='aboutus'),
+    path('contactus', views.countactus,name='contactus'),
+    path('carrers', views.Carrers,name='carrers'),
+    path('ourprograms', views.ourprograms,name='ourprograms'),
     path('program_detailing_page', views.program_detailing_page),
     
 ]
