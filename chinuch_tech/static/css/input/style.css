@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 
-.active{
-  @apply bg-amber-300 w-10 h-10;
+.active {
+  @apply bg-amber-300 w-[15%] h-[40%] rounded-sm text-center flex items-center justify-center ;
 }
 /* 
 header {

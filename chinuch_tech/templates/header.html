@@ -11,16 +11,20 @@
     </div>
     {% comment %} pages {% endcomment %}
     <div class="w-[50vw] h-full flex justify-around items-center text-white">
-      <div class="{% if request.path == '' %} active {% endif %}">
-        <a href="{% url 'home' %}" class="h-1">Our programs</a>
+      <!-- {{request.path}} -->
+      <div class="{% if request.path == '/' %} active {% endif %}">
+        <a href="{% url 'home' %}">home</a>
       </div>
-      <div class="{% if request.path == 'contactus' %} active {% endif %}">
+      <div class="{% if request.path == '/ourprograms' %} active {% endif %}">
+        <a href="{% url 'ourprograms' %}">Our programs</a>
+      </div>
+      <div class="{% if request.path == '/contactus' %} active {% endif %}">
         <a href="{% url 'contactus' %}">ContactUs</a>
       </div>
-      <div class="{% if request.path == 'aboutus' %} active {% endif %}">
+      <div class="{% if request.path == '/aboutus/' %} active {% endif %}">
         <a href="{% url 'aboutus' %}">AboutUs</a>
       </div>
-      <div class="{% if request.path == 'carrers' %} active {% endif %}">
+      <div class="{% if request.path == '/carrers' %} active {% endif %}">
         <a href="{% url 'carrers' %}">Carrers</a>
       </div>
     </div>

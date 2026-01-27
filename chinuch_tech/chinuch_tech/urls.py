@@ -21,7 +21,7 @@ from chinuch_tech import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home,name='home'),
-    path('aboutus', views.aboutus,name='aboutus'),
+    path('aboutus/', views.aboutus,name='aboutus'),
     path('contactus', views.countactus,name='contactus'),
     path('carrers', views.Carrers,name='carrers'),
     path('ourprograms', views.ourprograms,name='ourprograms'),
