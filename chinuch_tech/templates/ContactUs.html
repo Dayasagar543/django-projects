@@ -1,7 +1,37 @@
 {% extends "base.html" %} {% block content %}
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni ab
-  cupiditate quisquam, accusantium distinctio repudiandae necessitatibus sunt
-  nam commodi officia corporis, voluptatem quod aliquam.
-</p>
+<div class="w-full h-[70%] flex justify-center items-center">
+  <div>
+    <form action="" method="POST" class="">
+      {% csrf_token %}
+      <div>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" />
+      </div>
+      <div>
+        <label for="lastname">last Name</label>
+        <input type="text" id="lastname" />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="text" id="age" />
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" />
+      </div>
+      <div>
+        <label for="phoneno">Phoneno</label>
+        <input type="text" id="phoneno" />
+      </div>
+      <div>
+        <label for="firstname">FirstName</label>
+        <input type="text" id="FirstName" />
+      </div>
+      <div>
+        <label for="firstname">FirstName</label>
+        <input type="text" id="FirstName" />
+      </div>
+    </form>
+  </div>
+</div>
 {% endblock %}

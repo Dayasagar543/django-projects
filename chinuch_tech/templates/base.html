@@ -1,19 +1,25 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../static/images/chinuch.png" />
-    <link rel="stylesheet" href="{% static 'css/destination/style.css' %}">
-    {% comment %} <link rel="stylesheet" href="../static/css/style.css" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/destination/style.css' %}" />
+    {% comment %}
+    <link rel="stylesheet" href="../static/css/style.css" />
+    {% endcomment %}
     <title>CHINUCH</title>
   </head>
   <body>
-    {% include "header.html" %}
-    <main>{% block content %} {% endblock %}</main>
-    {% include "footer.html" %}
+    <div class="container">
+      {% include "header.html" %}
+
+      <main class="h-80 w-80vw flex justify-center items-center">
+        {% block content %} {% endblock %}
+      </main>
+
+      {% include "footer.html" %}
+    </div>
   </body>
 </html>
-
-
