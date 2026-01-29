@@ -43,4 +43,7 @@ def even_odd(request):
   return render(request, 'even_odd.html',{'result':result})
 
         
-       
+def advanced_cal(request,data):
+   
+
+    return render(request,"advanced_calculator",)

@@ -1,13 +1,14 @@
 <header>
   <div>
+    <h2>hi there form header</h2>
     <div>
-      <a href=""><img src="" alt="" /></a>
+      <a href=""><img src="" alt="" />calculator</a>
     </div>
     <div>
-      <div><a href=""></a></div>
-      <div><a href=""></a></div>
-      <div><a href=""></a></div>
-      <div><a href=""></a></div>
+      <div><a href="{% url 'home'  %}">home</a></div>
+      <div><a href="{% url 'evenodd'  %}">even_odd</a></div>
+      <div><a href="{% url 'calculator'  %}">calculator</a></div>
+      <div><a href="{% url 'advanced_cal'  %}">Advanced_calculator</a></div>
     </div>
   </div>
 </header>
