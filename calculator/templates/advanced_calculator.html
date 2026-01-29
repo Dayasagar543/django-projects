@@ -6,6 +6,22 @@
     <title>Advanced calculator</title>
   </head>
   <body>
-    <form action="" method="post"></form>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="num1">num1</label>
+        <input type="text" id="num1" class=" " />
+      </div>
+
+      <div>
+        <label for="num2">num2</label>
+        <input type="text" id="num2" class=" " />
+      </div>
+
+      <div>
+        <label for="result">result</label>
+        <input type="text" id="result" class=" " />
+      </div>
+    </form>
   </body>
 </html>
