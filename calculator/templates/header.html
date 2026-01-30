@@ -1,14 +1,22 @@
 <header>
   <div>
-    <h2>hi there form header</h2>
-    <div>
-      <a href=""><img src="" alt="" />calculator</a>
+    <a href=""><img src="" alt="" />calculator</a>
+  </div>
+  <div class="pages">
+    {% comment %} {{request.path}} {% endcomment %}
+    <div class="{% if request.path == '/' %} active {% endif %}">
+      <a href="{% url 'home'  %}">home</a>
     </div>
-    <div>
-      <div><a href="{% url 'home'  %}">home</a></div>
-      <div><a href="{% url 'evenodd'  %}">even_odd</a></div>
-      <div><a href="{% url 'calculator'  %}">calculator</a></div>
-      <div><a href="{% url 'advanced_cal'  %}">Advanced_calculator</a></div>
+    <div class="{% if request.path == '/evenodd/' %} active {% endif %}">
+      <a href="{% url 'evenodd'  %}">even_odd</a>
+    </div>
+    <div class="{% if request.path == '/calculator/' %} active {% endif %}">
+      <a href="{% url 'calculator'  %}">calculator</a>
+    </div>
+    <div
+      class="{% if request.path == '/advanced_calculator/' %} active {% endif %}"
+    >
+      <a href="{% url 'advanced_cal'  %}">Advanced_calculator</a>
     </div>
   </div>
 </header>

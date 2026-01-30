@@ -4,16 +4,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>calculator</title>
   </head>
   <body>
-    {% include "header.html" %}
-    <main>
-      {% block content %}
-      <h1>hi there how are you doing</h1>
-      {% endblock %}
-    </main>
-    {% include "footer.html" %}
+    <div>
+      {% include "header.html" %}
+      <main>
+        {% block content %}
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          libero itaque laboriosam commodi beatae totam magni aspernatur ea!
+          Quasi, delectus, placeat ut magnam, totam at illum aspernatur eius
+          voluptatum ducimus sit deserunt ea molestias impedit eum praesentium
+          inventore quas! Dolor iusto possimus animi ex molestias error quasi
+          nulla nam natus minima praesentium neque architecto, ipsa perspiciatis
+          deserunt corrupti id repudiandae, fuga unde repellat ducimus deleniti,
+          ratione consectetur facilis. Blanditiis tempore odit eveniet rem,
+          voluptate velit natus omnis recusandae dolorum eaque vitae repellendus
+          aut! Illum nostrum ipsa animi nemo reprehenderit repellat consequuntur
+          obcaecati, tempora harum voluptatibus odit dolorem dolore iure
+          suscipit aperiam ad nesciunt minima accusamus voluptatum quis
+          asperiores minus ab. Adipisci ex necessitatibus placeat obcaecati nam
+          minima vero maiores, ipsum voluptatem! Quidem dolor itaque labore unde
+          eos nobis eaque maxime enim laborum commodi? Eaque unde perferendis
+          reprehenderit molestiae facere quis assumenda fugiat architecto alias,
+          enim soluta quo aperiam. Quas, repellendus perspiciatis itaque
+          perferendis modi repudiandae mollitia quia inventore similique aliquid
+          tenetur magni eveniet facere esse molestias ducimus assumenda dolore
+          ipsam id iusto iste, cupiditate porro soluta cumque. Fugiat atque
+          aspernatur porro debitis, nemo praesentium enim suscipit eos sint
+          dolore nisi! Voluptatem ea placeat quaerat repellat? Aut harum rem
+          doloribus quidem.
+        </p>
+        {% endblock %}
+      </main>
+      {% include "footer.html" %}
+    </div>
   </body>
 </html>

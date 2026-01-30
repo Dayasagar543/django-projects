@@ -43,7 +43,33 @@ def even_odd(request):
   return render(request, 'even_odd.html',{'result':result})
 
         
-def advanced_cal(request,data):
-   
+def advanced_cal(request):
 
-    return render(request,"advanced_calculator",)
+    # using get
+    num1 = request.GET.get('num1')
+    num2 = request.GET.get('num2')
+    operation = request.GET.get('operation')
+    result = None
+
+    if num1 is not None and num2 is not None and operation:
+        try:
+            num1 = int(num1)
+            num2 = int(num2)
+
+            if operation == '+':
+                result = num1 + num2
+            elif operation == '-':
+                result = num1 - num2
+            elif operation == '*':
+                result = num1 * num2
+            elif operation == '/':
+                result = num1 / num2 if num2 != 0 else "Cannot divide by zero"
+
+        except ValueError:
+            result = "Please enter valid numbers"
+
+    return render(request, "advanced_calculator.html", {
+        "num1": num1,
+        "num2": num2,
+        "result": result
+    })
