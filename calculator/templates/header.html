@@ -1,6 +1,6 @@
 <header>
-  <div>
-    <a href=""><img src="" alt="" />calculator</a>
+  <div class="{% if request.path == '/' %} active {% endif %}" >
+    <a href="{% url 'home'  %}"><img src="" alt="" />calculator</a>
   </div>
   <div class="pages">
     {% comment %} {{request.path}} {% endcomment %}
@@ -13,10 +13,13 @@
     <div class="{% if request.path == '/calculator/' %} active {% endif %}">
       <a href="{% url 'calculator'  %}">calculator</a>
     </div>
-    <div
-      class="{% if request.path == '/advanced_calculator/' %} active {% endif %}"
-    >
+    <div class="{% if request.path == '/advanced_calculator/' %} active {% endif %}"> 
       <a href="{% url 'advanced_cal'  %}">Advanced_calculator</a>
     </div>
+    <div class="{% if request.path == '/service/' %} active {% endif %}">
+      <a href="{% url 'service'  %}">service</a>
+    </div>
+  </div>
+   
   </div>
 </header>

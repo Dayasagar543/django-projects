@@ -24,4 +24,5 @@ urlpatterns = [
     path('evenodd/',views.even_odd, name='evenodd'),
     path('calculator/',views.calculator_view, name='calculator'),
     path('advanced_calculator/',views.advanced_cal, name='advanced_cal'),
+    path('service/',views.Service, name='service'),
 ]

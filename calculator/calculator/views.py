@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from . import forms
+from service.models import service
 
 def home(request):
     return render(request, 'base.html')
@@ -73,3 +73,9 @@ def advanced_cal(request):
         "num2": num2,
         "result": result
     })
+
+
+def Service(request):
+    service_Data=service.objects.all()
+    data={'service_Data':service_Data}
+    return render(request,'service.html',data)

@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<div class="service_outer_div">
+  {% for obj in service_Data %}
+  <div class="service_div">
+    <div>{{obj.service_icon}}</div>
+    <h2>{{obj.service_product}}</h2>
+    <p>{{obj.Sericce_product_description | capfirst   }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

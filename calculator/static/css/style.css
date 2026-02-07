@@ -1,11 +1,11 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
-  background: rgb(160, 136, 216);
+  background: rgb(95, 104, 222);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,6 +29,11 @@ a {
   color: white;
 }
 
+.para {
+  width: 500px;
+  margin: 2rem;
+}
+
 .active {
   width: 10rem;
   height: 1.5rem;
@@ -36,6 +41,19 @@ a {
   text-align: center;
   align-self: center;
   border-radius: 5px;
+}
+
+.service_outer_div {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.service_div {
+  width: 200px;
+  height: 200px;
 }
 
 footer {
