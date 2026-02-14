@@ -1,9 +1,15 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from service.models import service
+from NEWS.models import news
+
+def site(request):
+    return render(request, 'base.html')
+
 
 def home(request):
-    return render(request, 'base.html')
+    home_data=news.objects.all()
+    return render(request, 'index.html',{'home_data':home_data})
 
 
 def calculator_view(request):
