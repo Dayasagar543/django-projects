@@ -9,7 +9,12 @@ def site(request):
 
 def home(request):
     home_data=news.objects.all()
-    return render(request, 'index.html',{'home_data':home_data})
+    if request.method=="GET":
+       service_name=request.GET.get("search")
+       if service_name!=None:
+           home_data=news.objects.filter(news_title=service_name)
+    # return render(request, 'index.html',{'home_data':home_data})
+    return render(request,'index.html',{'home_data':home_data})
 
 
 def calculator_view(request):
