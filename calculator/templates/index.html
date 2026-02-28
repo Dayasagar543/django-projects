@@ -1,12 +1,14 @@
 {% extends "base.html"%} {% block content %}
 <main>
-  {% comment %} <h1>hi there how are you doing</h1>
+  {% comment %}
+  <h1>hi there how are you doing</h1>
   <marquee behavior="" direction="left"
     >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
     necessitatibus magni optio, ex, consequuntur tempore deleniti expedita
     impedit eaque tenetur ullam in explicabo et reiciendis quo illo. Dicta, ea
     aliquid.</marquee
-  > {% endcomment %}
+  >
+  {% endcomment %}
 
   <form action="" method="get">
     <label for="search" id="search">search</label>
@@ -14,15 +16,15 @@
     <button type="submit">submit</button>
   </form>
 
-   <p>
+  <p>
     {% for data in home_data %}
-    <marquee behavior="" direction="" onMouseIn("stop") onMouseOut("play")>
-      {{data.news_title | safe }} {{data.news_description | safe }}
+    <marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()" >
+      <p  >
+        {{data.news_title | safe }} {{data.news_description | safe }}
+      </p>
     </marquee>
     {% endfor %}
-  </p> 
- 
-
+  </p>
 </main>
 
 {% endblock %}
