@@ -16,15 +16,13 @@
     <button type="submit">submit</button>
   </form>
 
-  <p>
+  <div>
     {% for data in home_data %}
-    <marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()" >
-      <p  >
-        {{data.news_title | safe }} {{data.news_description | safe }}
-      </p>
+    <marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()">
+      {{data.news_title | safe }} {{data.news_description | safe }}
     </marquee>
     {% endfor %}
-  </p>
+  </div>
 </main>
 
 {% endblock %}
