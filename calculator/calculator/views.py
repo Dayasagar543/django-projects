@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from service.models import service
 from NEWS.models import news
 
@@ -9,11 +9,15 @@ def site(request):
 
 def home(request):
     home_data=news.objects.all()
-    if request.method=="GET":
-       service_name=request.GET.get("search")
-       if service_name!=None:
-           home_data=news.objects.filter(news_title=service_name)
-    # return render(request, 'index.html',{'home_data':home_data})
+    if request.method=='GET':
+        service_name=request.GET.get('search')
+        if service_name!=None:
+            home_data=news.objects.filter(news_title__icontains=service_name)
+            # return render(request,'index.html',{'Serached_data':Serached_data})
+            return render(request,'index.html',{'home_data':home_data})
+        else:
+            return render(request,'index.html',{'home_data':home_data})
+                
     return render(request,'index.html',{'home_data':home_data})
 
 

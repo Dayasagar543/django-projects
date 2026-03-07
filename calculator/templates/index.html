@@ -21,6 +21,8 @@
     <marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()">
       {{data.news_title | safe }} {{data.news_description | safe }}
     </marquee>
+    {% empty %}
+    No data found
     {% endfor %}
   </div>
 </main>
