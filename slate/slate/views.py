@@ -3,13 +3,14 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("Hello, World!")
+    # return HttpResponse("Hello, World!")
+    return render(request, 'home.html')
 
 def about(request):
-    return HttpResponse("This is the about page.")
+    return render(request, 'about.html')
 
 def contactus(request):
-    return HttpResponse("This is the contact us page.")
+    return render(request, 'contactus.html')
 
 def careers(request):
-    return HttpResponse("This is the careers page.")
+    return render(request, 'careers.html')
