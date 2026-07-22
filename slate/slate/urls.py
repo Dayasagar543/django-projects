@@ -22,6 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('contact/', views.contactus, name='contactus'),
+    path('contact-us/', views.contactus, name='contactus'),
     path('careers/', views.careers, name='careers'),
+    path('products/', views.products, name='products'),
+    # path('products/<slug:product_id>/',views.product_detail,name="product_detail"),
+    # path('products/<int:product_id>/',views.product_detail,name="product_detail"),
+    # path('products/<str:product_id>/',views.product_detail,name="product_detail"),
+    path('products/<product_id>/',views.product_detail,name="product_detail"),
 ]

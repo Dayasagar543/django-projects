@@ -14,3 +14,12 @@ def contactus(request):
 
 def careers(request):
     return render(request, 'careers.html')
+
+def products(request,):
+    return render(request,'products.html')
+    # return HttpResponse("prodcuts page is under construction ")
+
+
+def product_detail(request,product_id):
+    return HttpResponse(f"<h1> Product detail page is under construction {product_id} </h1>")
+
